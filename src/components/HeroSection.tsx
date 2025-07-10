@@ -41,7 +41,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
-            От <span className="font-bold text-yellow-300">33 копеек</span> за показ ролика
+            От <span className="font-bold text-yellow-300">33 копеек</span> за показ одного ролика
           </p>
           
           <div className="max-w-md mx-auto mb-20">

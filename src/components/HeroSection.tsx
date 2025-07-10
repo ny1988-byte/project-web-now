@@ -44,7 +44,7 @@ const HeroSection = () => {
             От <span className="font-bold text-yellow-300">500 рублей</span> за 1000 показов за 14 дней
           </p>
           
-          <div className="max-w-md mx-auto mb-12">
+          <div className="max-w-md mx-auto mb-20">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-6 text-yellow-300">
                 Получить бесплатную консультацию

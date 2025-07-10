@@ -37,11 +37,11 @@ const HeroSection = () => {
             <span className="block bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">
               видео рекламу
             </span>
-            на популярных площадках
+            на популярных площадках за 7 дней
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
-            От <span className="font-bold text-yellow-300">500 рублей</span> за 1000 показов за 14 дней
+            От <span className="font-bold text-yellow-300">33 копеек</span> за показ ролика
           </p>
           
           <div className="max-w-md mx-auto mb-20">

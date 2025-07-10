@@ -1,7 +1,26 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
+import { useForm } from "react-hook-form";
+import { Phone } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const HeroSection = () => {
+  const { toast } = useToast();
+  const form = useForm({
+    defaultValues: {
+      phone: "",
+    },
+  });
+
+  const onSubmit = (data: { phone: string }) => {
+    toast({
+      title: "Заявка отправлена!",
+      description: "Мы свяжемся с вами в ближайшее время.",
+    });
+    form.reset();
+  };
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Gradient Background */}
@@ -25,15 +44,47 @@ const HeroSection = () => {
             От <span className="font-bold text-yellow-300">500 рублей</span> за 1000 показов за 14 дней
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-semibold">
-              Запустить рекламу
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg">
-              <PlayCircle className="mr-2 h-5 w-5" />
-              Как это работает
-            </Button>
+          <div className="max-w-md mx-auto mb-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-6 text-yellow-300">
+                Получить бесплатную консультацию
+              </h3>
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    rules={{
+                      required: "Номер телефона обязателен",
+                      pattern: {
+                        value: /^(\+7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/,
+                        message: "Введите корректный номер телефона"
+                      }
+                    }}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            {...field}
+                            placeholder="+7 (999) 123-45-67"
+                            className="bg-white/20 border-white/30 text-white placeholder:text-white/60 focus:border-yellow-300 h-12 text-lg"
+                          />
+                        </FormControl>
+                        <FormMessage className="text-yellow-300" />
+                      </FormItem>
+                    )}
+                  />
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full bg-yellow-300 text-primary hover:bg-yellow-400 px-8 py-4 text-lg font-semibold"
+                  >
+                    <Phone className="mr-2 h-5 w-5" />
+                    Получить консультацию
+                  </Button>
+                </form>
+              </Form>
+            </div>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">

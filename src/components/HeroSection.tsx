@@ -37,7 +37,7 @@ const HeroSection = () => {
             <span className="block bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">
               видео рекламу
             </span>
-            на популярных площадках за 7 дней
+            на самых популярных SMART TV площадках за 7 дней
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">

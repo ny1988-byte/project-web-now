@@ -1,4 +1,4 @@
-import { CheckCircle, Zap, Users2, Target, Shield, Globe2 } from "lucide-react";
+import { CheckCircle, Zap, Users2, Target, Shield, Globe2, Tv } from "lucide-react";
 
 const advantages = [
   {
@@ -47,6 +47,15 @@ const advantages = [
       "Основной объём трафика (70%) - Россия",
       "Около 20% охвата - страны СНГ",
       "10% охвата - пользователи по всему миру"
+    ]
+  },
+  {
+    icon: Tv,
+    title: "Топовые площадки для размещения",
+    items: [
+      "Стриминговые платформы: Старт, Окко, Кинопоиск, Иви, Кион, Винк, Премьер",
+      "Федеральные каналы: СТС, ЧЕ, Домашний, РЕН, Муз-ТВ, Ю",
+      "Дополнительные площадки: Wink"
     ]
   }
 ];

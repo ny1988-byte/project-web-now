@@ -87,7 +87,7 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-16">
             <div>
               <div className="text-3xl md:text-4xl font-bold text-yellow-300">30 млн</div>
               <div className="text-sm text-white/80">зрителей SmartTV</div>
